@@ -1,0 +1,5 @@
+<form #userForm="ngForm" (ngSubmit)="postApi(userForm.value)">
+    <input type="text" name="username" [(ngModel)]="userDto.username" required>
+    <input type="text" name="password" [(ngModel)]="userDto.password" required>
+    <button class="btn btn-success" type="submit" [disabled]="!userForm.form.valid">Save</button>
+</form>

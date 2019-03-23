@@ -1,0 +1,4 @@
+<form #apiForm="ngForm" (ngSubmit)="postApi(apiForm.value)">
+    <input type="text" name="content" [(ngModel)]="apiDto.content" required>
+    <button class="btn btn-success" type="submit" [disabled]="!apiForm.form.valid">Save</button>
+</form>
